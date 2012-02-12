@@ -1,7 +1,7 @@
 #!/bin/python
 #
-# Copyright 2011 Grigale Ltd. All rigths reserved.
-# Use is sujbect to license terms.
+# Copyright 2012 Grigale Ltd. All rigths reserved.
+# Use is subject to license terms.
 #
 import optparse
 import subprocess as sp
