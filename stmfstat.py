@@ -14,8 +14,8 @@ PORTIO = 'stmf_tgt_io'
 LU = 'stmf_lu_'
 LUIO = 'stmf_lu_io'
 
-PORT_HEADER_FMT = '{0: >12}'
-PORT_HEADER_VERBOSE_FMT = '{0: >12}  {1: <13}  {2: <}'
+PORT_HEADER_FMT = '{0: >59}'
+PORT_HEADER_VERBOSE_FMT = '{0: >59}  {1: <13}  {2: <}'
 
 LU_HEADER_FMT = '{0: >32}'
 LU_HEADER_VERBOSE_FMT = '{0: >32}  {1: <}'
@@ -137,14 +137,14 @@ class STMFStats():
     def portinventory(self, header=True, verbose=False):
         fmt = PORT_HEADER_VERBOSE_FMT if verbose else PORT_HEADER_FMT
 	if header:
-            hdr = fmt.format('TARGET/ALIAS', 'PROTOCOL', 'TARGET NAME')
+            hdr = fmt.format('TARGET NAME', 'PROTOCOL', 'TARGET ALIAS')
             print '\n', hdr
 
         for port in self.curr['port']:
             line = fmt.format(
-                self.curr['port'][port]['target-alias'],
+                self.curr['port'][port]['target-name'],
                 self.curr['port'][port]['protocol'],
-                self.curr['port'][port]['target-name'])
+                self.curr['port'][port]['target-alias'])
             print line
 
     def lustat(self, header=True, verbose=False):
