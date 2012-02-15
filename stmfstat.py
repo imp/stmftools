@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python
 #
 # Copyright 2012 Grigale Ltd. All rigths reserved.
 # Use is subject to license terms.
